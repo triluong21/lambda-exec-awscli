@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "6b591daa-47ed-46e5-a91d-210b8024fe8b",
+		"name": "Py Integration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve clientId and clientSecret",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xrkagkskx3.execute-api.us-east-1.amazonaws.com/dev/poolId/us-east-1_U12345/clientId/abcdefghijklm123",
+					"protocol": "https",
+					"host": [
+						"xrkagkskx3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"poolId",
+						"us-east-1_U12345",
+						"clientId",
+						"abcdefghijklm123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New App Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"poolId\": \"us-east-1_U12345\",\n\t\"appClientName\": \"myTestClientName\",\n\t\"scopes\": [\n\t\t\"https://www.google.com/\",\n\t\t\"https://www.microsoft.com/en-us/\",\n\t\t\"https://www.safari.com/\"\n\t\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://xrkagkskx3.execute-api.us-east-1.amazonaws.com/dev/createAppClients",
+					"protocol": "https",
+					"host": [
+						"xrkagkskx3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"createAppClients"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
